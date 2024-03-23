@@ -1,6 +1,6 @@
 ### ⏱️ Installation
 
- <a href='https://tinyurl.com/2bcwagf8' target="_blank"><img alt='Install bot' src='https://img.shields.io/badge/Install Bot-000?style=for-the-badge&logo=vercal&logoColor=white'/></a>
+ <a href='[https://tinyurl.com/2bcwagf8](https://jessipair-75e8bcfb723f.herokuapp.com/qr)' target="_blank"><img alt='Install bot' src='https://img.shields.io/badge/Install Bot-000?style=for-the-badge&logo=vercal&logoColor=white'/></a>
 
 
 ---
