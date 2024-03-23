@@ -1,11 +1,11 @@
 {
-  "name": "X-md",
+  "name": "Jessi-md",
   "description": "Whatsapp bot by Sithum Methmika",
   "keywords": [
     "whatsapp bot",
     "nodejs"
   ],
-  "repository": "https://github.com/sithumethmika2009/X-md",
+  "repository": "https://github.com/whiteshadowofficial/jessi-md",
     "buildpacks": [
     {
       "url": "heroku/nodejs"
