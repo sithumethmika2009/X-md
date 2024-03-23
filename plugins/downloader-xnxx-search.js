@@ -5,10 +5,10 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
   if (!chat.nsfw) throw `*🚫 To use premium features Register the bot .register your-name. age*`;
   let user = global.db.data.users[m.sender].age;
   if (user < 18) throw `❎ You must be 18 years or older to use this feature.`;
-  if (!text) throw `✳️ What do you want to search?\n📌 Usage: *${usedPrefix + command} <search>*\n\nExample: Cute teen girl or you can use a link as well\nExample: .xvid link  *`;
+  if (!text) throw `✳️ නමක් ගහපම් බලන් ඉන්නෙ🫢*`;
 
   m.react('⌛');
-    if (!text) throw 'Please provide a search query or a valid Xvideos URL.';
+    if (!text) throw '✳️ නමක් ගහපම් බලන් ඉන්නෙ🫢';
 
     // Check if the input is a valid Xvideos URL
     const isURL = /^(https?:\/\/)?(www\.)?xvideos\.com\/.+$/i.test(text);
@@ -27,17 +27,17 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
           m.chat,
           Buffer.from(buffer),
           `${title}.mp4`,
-          `Here is your Xvideos video: ${title}`
+          `*ආ......මෙන්න💋*`
         );
 
       } else {
         // If it's not a valid URL, perform a search and display the search results
         const results = await xvideosSearch(text);
         if (results.length === 0) {
-          m.reply('No search results found for the given query.');
+          m.reply('එහෙම එකක් නම් නෑ.');
         } else {
           const searchResults = results.map((result, index) => {
-            return `${index + 1}. *${result.title}*\nDuration: ${result.duration}\nQuality: ${result.quality}\nURL: ${result.url}`;
+            return `${index + 1}. *${result.title}*\nතියෙන වෙලාව: ${result.duration}\nකොලිටිය: ${result.quality}\nලිංකුව: ${result.url}`;
           }).join('\n\n');
 
           m.reply(`*Search Results for "${text}":*\n\n${searchResults}`);
@@ -45,7 +45,7 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
       }
     } catch (error) {
       console.error(error);
-      throw '❌ Error. Failed to fetch Xvideos video details.';
+      throw '❌ දැන් මන් නිදි.පස්සෙ වෙලාවක දෙන්නම්.';
     }
   };
 

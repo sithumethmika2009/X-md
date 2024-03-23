@@ -7,10 +7,10 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
   let chat = global.db.data.chats[m.chat];
   if (!chat.nsfw) throw `*🚫 To use premium features Register the bot .register your-name. age*`;
   let user = global.db.data.users[m.sender].age;
-  if (user < 18) throw `❎ You must be 18 years or older to use this feature.`;
-  if (!text) throw `✳️ What do you want to search?\n📌 Usage: *${usedPrefix + command} <search>*\n\nExample: Cute teen girl or you can use a link as well\nExample: .xnxx link *`;
+  if (user < 18) throw `පල පොඩි එකා.තෝ තාම පොඩී ඕව බලන්න🤭.`;
+  if (!text) throw `✳️ නමක් ගහපම් බලන් ඉන්නෙ🫢`;
 
-  m.react('⌛');
+  m.react('💋');
 
   let url;
   try {
@@ -27,16 +27,16 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
           m.chat,
           files.high,
           'video.mp4',
-          'Here is your video',
+          'ආ.....මෙන්න🫡',
           m
         );
         m.react('✅');
       } else {
-        m.reply('❌ Error: Failed to retrieve the download URL.');
+        m.reply('❌ Error: හරියට ලින්ක් එක දාපම්.😼');
       }
     } catch (e) {
       console.error(e);
-      m.reply('❌ Error: We encountered a problem while processing the request.');
+      m.reply('❌ දැන් මන් නිදි.පස්සෙ වෙලාවක දෙන්නම්.');
     }
   } else {
     try {
@@ -49,11 +49,11 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
           },
         });
       } else {
-        m.reply('❌ Error: No search results found.');
+        m.reply('❌ Error: එහෙම එකක් නම් නෑ.');
       }
     } catch (e) {
       console.error(e);
-      m.reply('❌ Error: We encountered a problem while processing the request.');
+      m.reply('❌ දැන් නිදි.පස්සෙ බලමු.');
     }
   }
 };

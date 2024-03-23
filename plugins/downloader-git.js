@@ -6,7 +6,7 @@ let handler = async (m, {conn, text, args, usedPrefix, command }) => {
     let [usr, rep] = text.split`/`
     let url = `https://api.github.com/repos/${encodeURIComponent(usr)}/${encodeURIComponent(rep)}/zipball`
     let name = `${encodeURIComponent(rep)}.zip`
-    m.reply(`D o w n l o a d i n g. . .`)
+    m.reply(`දෙ න් න ම්. . .`)
     conn.sendFile(m.chat, url, name, null, m)
 }
 

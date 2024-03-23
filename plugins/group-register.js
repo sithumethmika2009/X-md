@@ -3,10 +3,10 @@ let Reg = /\|?(.*)([.|] *?)([0-9]*)$/i
 let handler = async function (m, { conn, text, usedPrefix, command }) {
   let user = global.db.data.users[m.sender]
   let name2 = conn.getName(m.sender)
-  if (user.registered === true) throw ` *You are already registered..😾*`
-  if (!Reg.test(text)) throw `*To register, give the following command.*\n\nExg:- *.register* ws.18`
+  if (user.registered === true) throw ` *එක පාරක් register උනාම ඇති..😾*`
+  if (!Reg.test(text)) throw ``
   let [_, name, splitter, age] = text.match(Reg)
-  if (!name) throw ' *The name cannot contain a space...⏱*️'
+  if (!name) throw ' *නමෙහි හිස්තැන් බෑ...⏱*️'
   if (!age) throw ' *The age cannot contain a space...⏱️*'
   if (name.length >= 30) throw ' *Your name is not accepted, please enter another name...⏱️*' 
   age = parseInt(age)
@@ -22,7 +22,7 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
 │
 │ *Registered Successful..⏱️*
 │
-│ ➬*NUMBER:* ${name}
+│ ➬*NAME:* ${name}
 │ ➬*AGE* : ${age} years
 │ ➬*ID* : ${sn}
 │

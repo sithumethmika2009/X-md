@@ -13,7 +13,7 @@ export async function all(m) {
 	
 	if (m.messageStubType === (WAMessageStubType.CALL_MISSED_VOICE || WAMessageStubType.CALL_MISSED_VIDEO )) {
 	    await delay(1000) 
-		await conn.reply(m.chat, `Don't call Bot!!`, fakes)
+		await conn.reply(m.chat, `කෝල් කරන්න එපා පගෝ😪`, fakes)
 		return conn.updateBlockStatus(m.chat, "block") 
 	}
 }
