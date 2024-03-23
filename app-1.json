@@ -1,0 +1,23 @@
+{
+  "name": "X-md",
+  "description": "Whatsapp bot by Sithum Methmika",
+  "keywords": [
+    "whatsapp bot",
+    "nodejs"
+  ],
+  "repository": "https://github.com/sithumethmika2009/X-md",
+    "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/DuckyTeam/heroku-buildpack-imagemagick.git"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },
+    {
+      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+    }
+  ]
+}
